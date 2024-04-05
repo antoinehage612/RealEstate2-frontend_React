@@ -1,7 +1,11 @@
-import "./homePage.scss";
+import { useContext } from "react";
 import SearchBar from "../../components/searchBar/SearchBar";
+import "./homePage.scss";
+import { AuthContext } from "../../context/AuthContext";
 
-function homePage() {
+function HomePage() {
+  const { currentUser } = useContext(AuthContext);
+
   return (
     <div className="homePage">
       <div className="textContainer">
@@ -24,7 +28,7 @@ function homePage() {
               <h2>Award Gained</h2>
             </div>
             <div className="box">
-              <h1>1200+</h1>
+              <h1>2000+</h1>
               <h2>Property Ready</h2>
             </div>
           </div>
@@ -37,4 +41,4 @@ function homePage() {
   );
 }
 
-export default homePage;
+export default HomePage;
